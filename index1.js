@@ -7,8 +7,8 @@ function speak(text) {
     text_speak.rate = 1;
     text_speak.volume = 1; // Adjusted volume range
     text_speak.pitch = 2;
-    text_speak.lang = "en-GB";
-   // text_speak.lang = "hi-GB";
+    //text_speak.lang = "en-GB";
+    text_speak.lang = "hi-GB";
     window.speechSynthesis.speak(text_speak);
 }
 
@@ -18,11 +18,11 @@ function wishMe() {
     const hour = day.getHours();
 
     if (hour >= 0 && hour < 12) {
-        speak("Good morning, Vansh....hum apki sevaa me haazir hein... boliye kya seva kre apki");
+        speak("Good morning, boss....hum apki sevaa me haazir hein... boliye kya seva kre apki");
     } else if (hour >= 12 && hour < 17) {
-        speak("Good afternoon, Vansh....hum apki sevaa  me  haazir hein ...boliye kya seva kre apki");
+        speak("Good afternoon, boss....hum apki sevaa  me  haazir hein ...boliye kya seva kre apki");
     } else {
-        speak("Good evening, Vansh...hum apki sevaa  me haazir hein ...boliye kya seva kre apki");
+        speak("Good evening, boss...hum apki sevaa  me haazir hein ...boliye kya seva kre apki");
     }
 }
 
@@ -48,14 +48,14 @@ btn.addEventListener('click', () => {
 });
 
 const familyDetails = {
-    father: "Deess Raaj",
-    mother: "Nirmala Devi",
-    bigBrother: "Raghav",
-    daughter: "Tania",
-    sweetSon: "you",
-    myFathersBrother: "Rakesh Kumar",
-    hisWife: "Anu",
-    theirChildren: "Rohit and Rakshit"
+    father: "",
+    mother: "",
+    bigBrother: "",
+    daughter: "",
+    sweetSon: "",
+    myFathersBrother: "r",
+    hisWife: "",
+    theirChildren: ""
 };
 
 function getFamilyDescription() {
@@ -73,8 +73,8 @@ function getFamilyDescription() {
 const friends = {
     bhai: "bunti",
     bhai2: "monti",
-    bhai3: "piyush sharma",
-    love: "kanika jamwal"
+    bhai3: "a",
+    love: ""
 };
 
 function getFriendDescription() {
