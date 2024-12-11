@@ -18,11 +18,11 @@ function wishMe() {
     const hour = day.getHours();
 
     if (hour >= 0 && hour < 12) {
-        speak("Good morning, boss....hum apki sevaa me haazir hein... boliye kya seva kre apki");
+        speak("Good morning, boss....how can i assist you");
     } else if (hour >= 12 && hour < 17) {
-        speak("Good afternoon, boss....hum apki sevaa  me  haazir hein ...boliye kya seva kre apki");
+        speak("Good afternoon, boss.....how can i assist you");
     } else {
-        speak("Good evening, boss...hum apki sevaa  me haazir hein ...boliye kya seva kre apki");
+        speak("Good evening, boss....how can i assist you");
     }
 }
 
@@ -99,7 +99,7 @@ function describePlanets() {
 async function takeCommand(command) {
     // Respond to greetings
     if (command.includes("hello") || command.includes("hi")) {
-        speak("Hello Vansh, how can I assist you today?");
+        speak("Hello boss, how can I assist you today?");
     } else if (command.includes("family")) {
         speak(getFamilyDescription());
     } 
