@@ -27,7 +27,7 @@ function wishMe() {
 }
 
 window.addEventListener('load', () => {
-    speak("Initializing JARVIS");
+    speak("Initializing MARIYA");
     wishMe();
 });
 
@@ -110,14 +110,14 @@ async function takeCommand(command) {
         describePlanets();
     } else if (command.includes("nice")) {
         speak("Thank you Vansh, I try my best to improve myself.");
-    } else if (command.includes("sing a song")) {
+    } else if (command.includes("sing ")) {
         const songs = [
             "Jaane meri jaane man, bachpan ka pyaar mera bhool nahi jaana re..jaisa mera pyaar ha pyaar tuje kiya hein...",
         ];
         const randomSong = songs[Math.floor(Math.random() * songs.length)];
         speak(randomSong);
         content.textContent = "Singing a song for you!";
-    } else if (command.includes("play music")) {
+    } else if (command.includes("play ")) {
         const audio = new Audio('path_to_song.mp3'); // Replace with a valid audio file path
         audio.play();
         speak("I'm playing some music for you.");
@@ -126,7 +126,7 @@ async function takeCommand(command) {
     
     
     else if (command.includes("who are you")||command.includes("tell me about yourself")||command.includes("Give me your introduction")) {
-        speak("I am Jarvis, your virtual assistant!..i help you to ease your work and answer your question as much as possible");
+        speak("I am Mariya, Vansh's virtual assistant!..i help you to ease your work and answer your question as much as possible");
     } 
     else if (command.includes("what are your features ")||command.includes("tell me about your features")) {
         speak("My features is to greting  commands , remiders ,tell date and time, do basic calculation ,do web search, open websites,personal questions,and  few general knowledge questions ");
@@ -160,7 +160,7 @@ async function takeCommand(command) {
     } 
     
     else if (command.includes("what is your name")) {
-        speak("My name is Jarvis.");
+        speak("My name is Mariya.");
     }
     else if (command.includes("how do you work")) {
         speak("I work by understanding your voice commands and responding with the most relevant information or performing tasks for you.");
@@ -655,7 +655,7 @@ else if (command.includes("how to write a good resume")) {
     else if (command.includes("what is") || command.includes("who is") || command.includes("which is") ) {
         const query = command.replace(/ /g, "+");
         window.open(`https://www.google.com/search?q=${query}`, "_blank");
-        speak("I've opened Google search for you....please read from it ");
+        speak("I've also opened Google search for you....to understand more about it ");
 
         try {
             const chatGPTResponse = await fetchChatGPTResponse(command);
@@ -665,7 +665,7 @@ else if (command.includes("how to write a good resume")) {
                 speak("Sorry, I couldn't retrieve an answer at this time.");
             }
         } catch (error) {
-            speak("Sorry, I couldn't retrieve an answer at this time ... you have read it from screen");
+            speak("");
             console.error("Error fetching ChatGPT response:", error);
         }
     } 
